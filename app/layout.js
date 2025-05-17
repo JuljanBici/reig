@@ -1,14 +1,21 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Playfair_Display, Poppins } from "next/font/google";
 import "./globals.css";
+import Navbar from "./components/navbar";
+import Footer from "./components/footer";
+import ScrollProvider from "@/app/components/ScrollProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Assign fonts to properly named variables
+const playfairDisplay = Playfair_Display({
+  variable: "--font-playfair-display",
   subsets: ["latin"],
+  display: "swap", // optional: for better font rendering
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const poppins = Poppins({
+  variable: "--font-poppins",
   subsets: ["latin"],
+  display: "swap",
+  weight: ["300", "400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -18,12 +25,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html lang="en" className={`${playfairDisplay.variable} ${poppins.variable}`}>
+      <body className="antialiased font-sans">
+        <Navbar></Navbar>
+        <ScrollProvider>{children}</ScrollProvider>
+        <Footer></Footer>
       </body>
     </html>
   );
 }
+
