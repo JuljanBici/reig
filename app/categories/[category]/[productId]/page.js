@@ -50,7 +50,7 @@ export default function ProductPage({ params }) {
                   <dt> 
                     <span class="text-sm font-semibold text-black"> AERODYNAMIC DESIGN </span> 
                   </dt> 
-                  <dd class="text-gray-600 mt-1 text-sm text-pretty"> Feel the difference with our aerodynamic skins that complement the Samsung Galaxy S21 Ultra’s contours, ensuring uncompromised protection. </dd> 
+                  <dd class="text-gray-600 mt-1 text-sm text-pretty"> Feel the difference with our aerodynamic skins that complement the Samsung Galaxy S21 Ultra&apos;s contours, ensuring uncompromised protection. </dd> 
                 </div>
                 <div class="border border-gray-200 p-6 rounded-lg hover:shadow-2xl duration-200 bg-gray-50"> 
                   <dt>

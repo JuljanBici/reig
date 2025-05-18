@@ -3,7 +3,7 @@ const products = [
   {
     id: "nivea-men",
     name: "Nivea Men Cream",
-    desc: "Intensely hydrating face and body cream, designed for men’s skin to deliver all-day moisture without greasiness.",
+    desc: "Intensely hydrating face and body cream, designed for men&apos;s skin to deliver all-day moisture without greasiness.",
     price: 12.99,
     img1: "/images/nivea1.jpg",
     img2: "/images/nivea2.jpg",
@@ -102,7 +102,7 @@ const products = [
   {
     id: "cerave-cleanser",
     name: "CeraVe Hydrating Facial Cleanser",
-    desc: "Gentle, non-foaming cleanser with ceramides and hyaluronic acid to cleanse and retain skin’s moisture.",
+    desc: "Gentle, non-foaming cleanser with ceramides and hyaluronic acid to cleanse and retain skin&apos;s moisture.",
     price: 9.89,
     img1: "/images/cerave1.jpg",
     img2: "/images/cerave2.jpg",

@@ -1,5 +1,6 @@
 'use client'
 import Image from 'next/image'
+import Link from 'next/link';
 
 
 export default function Home() {
@@ -15,10 +16,10 @@ export default function Home() {
                     </div>
                     <div>
                         <div className="ml-auto md:w-2/3 md:pt-12 lg:w-1/2">
-                            <p className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that's honest, aesthetic and natural. Probably the only designer you’ll ever need.</p>
-                            <a data-rellax-speed="1" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
+                            <p className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that's honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</p>
+                            <Link data-rellax-speed="1" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
                                 <span className="relative">See our work</span>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                     <div data-rellax-speed="-5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" className="rellax relative mt-16 ml-auto w-max md:mt-32 md:ml-0 xl:-mt-16" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>

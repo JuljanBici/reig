@@ -21,7 +21,7 @@ export default function Categories() {
                     </h1> 
                     <p className="mt-4 text-lg text-gray-600 text-balance w-1/2">If you could kick the person in the pants responsible for most of your trouble, you wouldn't sit for a month</p> 
                     <div className="flex flex-wrap gap-2 mt-6"> 
-                        <a href="/system/overview" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full h-12 lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white">See all pages
+                        <a href="" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full h-12 lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white">See all pages
                         </a>
                         <a href="https://buy.polar.sh/polar_cl_AI5VATxIOiiNdtZ8BqtSgBW48ED2kS52j5W6BN6sITg" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 h-12 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 lg:w-auto rounded-lg border-gray-200">Buy SuperStore
                         </a> 
