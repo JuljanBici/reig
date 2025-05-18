@@ -23,7 +23,7 @@ export default function Navbar() {
         }`}>
               <nav className="mx-auto max-w-7xl px-6 py-4 md:py-8 md:px-12 xl:px-12 2xl:px-10">
                   <div className="flex items-center justify-between">
-                      <a href="/" className="text-2xl font-light tracking-widest text-white">UNNAMED</a>
+                      <Link href="/" className="text-2xl font-light tracking-widest text-white">UNNAMED</Link>
                       <div className='space-x-5'>
                         <Link href="/categories" className="relative py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10">
                             <span className="relative">Branded</span>

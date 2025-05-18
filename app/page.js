@@ -16,7 +16,7 @@ export default function Home() {
                     </div>
                     <div>
                         <div className="ml-auto md:w-2/3 md:pt-12 lg:w-1/2">
-                            <p className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that's honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</p>
+                            <p className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that&apos;s honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</p>
                             <Link data-rellax-speed="1" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
                                 <span className="relative">See our work</span>
                             </Link>
@@ -240,7 +240,7 @@ export default function Home() {
             <section id="contact" className="relative z-10 bg-gradient-to-b from-black via-black/80 to-black pt-32 backdrop-blur-3xl lg:pb-32 lg:pt-0">
                 <div className="mx-auto max-w-7xl px-6 lg:px-12 xl:px-6 2xl:px-0">
                     <div className="flex flex-wrap items-center gap-6">
-                        <h2 className="text-7xl font-bold text-white xl:text-8xl">Let's work together</h2>
+                        <h2 className="text-7xl font-bold text-white xl:text-8xl">Let&apos;s work together</h2>
                         <span className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">__</span>
                     </div>
                     <div className="mt-24">

@@ -19,7 +19,7 @@ export default function CategoryPage({ params }) {
                     Superstore, your next ecommerce 
                     <span className="text-gray-500">theme for all your products.</span> 
                 </h1> 
-                <p className="mt-4 text-lg text-gray-600 text-balance w-1/2">If you could kick the person in the pants responsible for most of your trouble, you wouldn't sit for a month</p> 
+                <p className="mt-4 text-lg text-gray-600 text-balance w-1/2">If you could kick the person in the pants responsible for most of your trouble, you wouldn&apos;t sit for a month</p> 
                 <div className="flex flex-wrap gap-2 mt-6"> 
                     <a href="" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 active:text-gray-900/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full h-12 lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white">See all pages
                     </a>

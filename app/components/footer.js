@@ -27,9 +27,9 @@ export default function Footer() {
                 </div>
                 <div className="mt-12 md:mt-16 lg:mt-24">
                     <div className="space-y-8 md:space-y-12">
-                        <a href="/" className="text-2xl font-light tracking-widest text-white">
+                        <Link href="/" className="text-2xl font-light tracking-widest text-white">
                             {/* <img className="h-8 w-auto brightness-200" src="/favicon.svg" alt="logo mark" width="100" height="100"/> */}
-                        </a>
+                        </Link>
                         <nav>
                             <ul className="flex flex-wrap gap-6 text-sm uppercase tracking-wider text-white">
                                 <li>
