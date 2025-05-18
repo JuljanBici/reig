@@ -282,7 +282,7 @@ export default function Home() {
             </section>
         </main>
     
-        <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+        {/* <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script> */}
     
 
 </div>
