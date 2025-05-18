@@ -27,14 +27,14 @@ export default function About() {
                     </div>
                 </div>
             </section>
-            <section id="overview" class="relative z-10 bg-black pb-20 lg:pt-20">
-                <div class="xl:px-6">
-                    <div class="grid grid-cols-2 gap-3 md:gap-6">
+            <section id="overview" className="relative z-10 bg-black pb-20 lg:pt-20">
+                <div className="xl:px-6">
+                    <div className="grid grid-cols-2 gap-3 md:gap-6">
                     <div
-                        class="relative before:absolute before:inset-0 before:origin-top before:bg-gradient-to-t before:from-black/5 before:opacity-50 before:backdrop-grayscale before:transition before:duration-500 hover:before:origin-bottom hover:before:scale-y-0"
+                        className="relative before:absolute before:inset-0 before:origin-top before:bg-gradient-to-t before:from-black/5 before:opacity-50 before:backdrop-grayscale before:transition before:duration-500 hover:before:origin-bottom hover:before:scale-y-0"
                     >
                         <img
-                        class="transition duration-500"
+                        className="transition duration-500"
                         src="https://radiant.tailus.io/images/gild/gild-jump.webp"
                         alt="project image"
                         width="1380"
@@ -46,10 +46,10 @@ export default function About() {
                         data-rellax-speed="-2"
                         data-rellax-xs-speed="0"
                         data-rellax-mobile-speed="0"
-                        class="rellax relative translate-y-0 md:translate-y-[143px] before:absolute before:inset-0 before:origin-top before:bg-gradient-to-t before:from-black/5 before:opacity-50 before:backdrop-grayscale before:transition before:duration-500 hover:before:origin-bottom hover:before:scale-y-0"
+                        className="rellax relative translate-y-0 md:translate-y-[143px] before:absolute before:inset-0 before:origin-top before:bg-gradient-to-t before:from-black/5 before:opacity-50 before:backdrop-grayscale before:transition before:duration-500 hover:before:origin-bottom hover:before:scale-y-0"
                     >
                         <img
-                        class="h-full w-full object-cover transition duration-500"
+                        className="h-full w-full object-cover transition duration-500"
                         src="https://radiant.tailus.io/images/gild/gild-legs.webp"
                         alt="project cover"
                         width="2000"
@@ -86,26 +86,26 @@ export default function About() {
                             <img className="h-full w-full object-cover transition duration-500" src="https://radiant.tailus.io/images/gild/gild-legs.webp" alt="project cover" width="2000" height="1333"/>
                         </div>
                     </div>
-                    <div class="relative">
-                        <div class="absolute hidden xl:block z-10 inset-0 m-auto h-max w-max -translate-y-0 xl:-translate-y-56" >
-                            <div class="mx-auto max-w-7xl px-6 lg:-translate-y-96 lg:px-12 xl:px-6 2xl:px-0">
+                    <div className="relative">
+                        <div className="absolute hidden xl:block z-10 inset-0 m-auto h-max w-max -translate-y-0 xl:-translate-y-56" >
+                            <div className="mx-auto max-w-7xl px-6 lg:-translate-y-96 lg:px-12 xl:px-6 2xl:px-0">
                                 <div
                                     data-rellax-speed="-2"
                                     data-rellax-xs-speed="0"
                                     data-rellax-mobile-speed="0"
-                                    class="rellax -mt-96 translate-y-0 md:translate-y-[670px]"
+                                    className="rellax -mt-96 translate-y-0 md:translate-y-[670px]"
                                 >
-                                    <div class="flex flex-wrap items-center gap-6">
-                                    <h2 class="text-7xl font-bold text-white sm:text-8xl xl:text-9xl">
+                                    <div className="flex flex-wrap items-center gap-6">
+                                    <h2 className="text-7xl font-bold text-white sm:text-8xl xl:text-9xl">
                                         Built for Speed
                                     </h2>
                                     <span
-                                        class="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white"
+                                        className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white"
                                         >03</span
                                     >
                                     </div>
                                     <div
-                                    class="mt-12 ml-auto text-lg font-light text-white sm:text-2xl md:w-2/3 lg:w-2/5 xl:leading-normal"
+                                    className="mt-12 ml-auto text-lg font-light text-white sm:text-2xl md:w-2/3 lg:w-2/5 xl:leading-normal"
                                     >
                                     <p>
                                         Accusantium quia sed modi porro alias illo odit officia, est quas
@@ -117,7 +117,7 @@ export default function About() {
                             </div>
                         </div>
                         <img
-                            class="h-full w-full object-cover"
+                            className="h-full w-full object-cover"
                             src="https://radiant.tailus.io/images/gild/gild-cover3.webp"
                             alt="cover"
                             width="1800"

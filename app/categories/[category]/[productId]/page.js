@@ -25,38 +25,38 @@ export default function ProductPage({ params }) {
     //   <p className="font-bold text-lg mt-2">${product.price}</p>
     // </div>
     <section> 
-      <div class="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36"> 
-        <h1 class="text-3xl md:text-5xl lg:text-7xl text-balance font-display"> {product.name} </h1> 
-        <div class="mx-auto mt-12"> 
-          <div class="lg:gap-x-8 lg:gap-y-10 lg:grid lg:grid-cols-7 lg:grid-rows-1 xl:gap-x-16"> 
-            <div class="lg:col-span-4 lg:row-end-1 space-y-3"> 
-              <div class="aspect-h-3 aspect-w-4 overflow-hidden"> 
-                <img src="https://images.unsplash.com/photo-1610792516820-2bff50c652a2?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sleek and modern Samsung Galaxy S21 Ultra" class="object-center object-cover rounded-xl"/> 
+      <div className="items-center px-8 pb-12 mx-auto max-w-7xl md:px-12 lg:pb-24 pt-36"> 
+        <h1 className="text-3xl md:text-5xl lg:text-7xl text-balance font-display"> {product.name} </h1> 
+        <div className="mx-auto mt-12"> 
+          <div className="lg:gap-x-8 lg:gap-y-10 lg:grid lg:grid-cols-7 lg:grid-rows-1 xl:gap-x-16"> 
+            <div className="lg:col-span-4 lg:row-end-1 space-y-3"> 
+              <div className="aspect-h-3 aspect-w-4 overflow-hidden"> 
+                <img src="https://images.unsplash.com/photo-1610792516820-2bff50c652a2?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Sleek and modern Samsung Galaxy S21 Ultra" className="object-center object-cover rounded-xl"/> 
               </div>
-              <div class="aspect-h-3 aspect-w-4 overflow-hidden"> 
-                <img src="https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elegant Samsung Galaxy S21 Ultra in hand" class="object-center object-cover rounded-xl"/> 
+              <div className="aspect-h-3 aspect-w-4 overflow-hidden"> 
+                <img src="https://images.unsplash.com/photo-1610945264803-c22b62d2a7b3?q=80&amp;w=2940&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Elegant Samsung Galaxy S21 Ultra in hand" className="object-center object-cover rounded-xl"/> 
               </div> 
             </div> 
-            <div class="mx-auto lg:col-span-3 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 max-w-2xl mt-14 sm:mt-16"> 
-              <p class="text-gray-300"> {product.desc} </p> 
-              <div class="mt-10 gap-2 grid grid-cols-1 sm:grid-cols-2"> 
-                <a href="#_" title="link to your page" aria-label="your label" class="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white">Order Now
+            <div className="mx-auto lg:col-span-3 lg:max-w-none lg:mt-0 lg:row-end-2 lg:row-span-2 max-w-2xl mt-14 sm:mt-16"> 
+              <p className="text-gray-300"> {product.desc} </p> 
+              <div className="mt-10 gap-2 grid grid-cols-1 sm:grid-cols-2"> 
+                <a href="#_" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full lg:w-auto rounded-lg bg-black border-white/20 hover:bg-gray-600 text-white">Order Now
                 </a>
-                <div href="#_" title="link to your page" aria-label="your label" class="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border border-gray-200 font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 text-black lg:w-auto rounded-lg">${product.price}
+                <div href="#_" title="link to your page" aria-label="your label" className="items-center text-sm active:bg-gray-100 active:text-black/60 active:transition-none border border-gray-200 font-medium gap-2 inline-flex justify-center outline-offset-2 px-6 py-3 transition w-full bg-white hover:bg-gray-50 text-black lg:w-auto rounded-lg">${product.price}
                 </div> 
               </div> 
-              <dl class="flex flex-col gap-2 mt-8"> 
-                <div class="border border-gray-200 p-6 rounded-lg hover:shadow-2xl duration-200 bg-gray-50"> 
+              <dl className="flex flex-col gap-2 mt-8"> 
+                <div className="border border-gray-200 p-6 rounded-lg hover:shadow-2xl duration-200 bg-gray-50"> 
                   <dt> 
-                    <span class="text-sm font-semibold text-black"> AERODYNAMIC DESIGN </span> 
+                    <span className="text-sm font-semibold text-black"> AERODYNAMIC DESIGN </span> 
                   </dt> 
-                  <dd class="text-gray-600 mt-1 text-sm text-pretty"> Feel the difference with our aerodynamic skins that complement the Samsung Galaxy S21 Ultra&apos;s contours, ensuring uncompromised protection. </dd> 
+                  <dd className="text-gray-600 mt-1 text-sm text-pretty"> Feel the difference with our aerodynamic skins that complement the Samsung Galaxy S21 Ultra&apos;s contours, ensuring uncompromised protection. </dd> 
                 </div>
-                <div class="border border-gray-200 p-6 rounded-lg hover:shadow-2xl duration-200 bg-gray-50"> 
+                <div className="border border-gray-200 p-6 rounded-lg hover:shadow-2xl duration-200 bg-gray-50"> 
                   <dt>
-                   <span class="text-sm font-semibold text-black"> CUSTOM FIT </span> 
+                   <span className="text-sm font-semibold text-black"> CUSTOM FIT </span> 
                    </dt> 
-                   <dd class="text-gray-600 mt-1 text-sm text-pretty"> Precision-engineered to the smallest detail, each accessory is a perfect match for the Galaxy S21 Ultra, ensuring seamless compatibility. </dd> 
+                   <dd className="text-gray-600 mt-1 text-sm text-pretty"> Precision-engineered to the smallest detail, each accessory is a perfect match for the Galaxy S21 Ultra, ensuring seamless compatibility. </dd> 
                 </div>
               </dl> 
             </div>
