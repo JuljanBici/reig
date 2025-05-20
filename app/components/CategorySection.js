@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 
-export default function CategorySection({ products, category }) {
+export default function categorySection({ products, category }) {
   return (
     <>
       <section> 
