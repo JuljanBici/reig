@@ -70,7 +70,7 @@ export default function Categories() {
                     {Object.entries(categorized).map(([category, items]) => (
                     <>
                         <div className="border-b border-gray-200 pb-5 pt-10"> 
-                            <h3 className="text-xl first-letter:uppercase font-semibold">{category}</h3> 
+                            <Link href={`/categories/${category}`} className="text-xl first-letter:uppercase font-semibold">{category}</Link> 
                         </div> 
                         <div className="grid md:grid-cols-2 lg:grid-cols-4 mt-12 gap-2 gap-y-12 lg:gap-y-24">
                             {items.map((product,index) => (
