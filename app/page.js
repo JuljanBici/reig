@@ -106,17 +106,15 @@ export default function Home() {
                         data-rellax-speed="-3"
                         data-rellax-xs-speed="0"
                         data-rellax-mobile-speed="0"
-                        className="rellax flex flex-wrap items-center gap-6"
-                        style={{ transform: "translate3d(0px, 202px, 0px)" }}
-                    >
+                        className="rellax flex flex-wrap items-center gap-6">
                         <motion.h2
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             transition={{ duration: 0.3 }}
                             variants={{
-                                hidden: {opacity: 0, y: -50 },
-                                visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.3, ease: 'easeOut' } }
+                                hidden: {opacity: 0, x: -20 },
+                                visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay:0.3, ease: 'easeOut' } }
                             }}
                         className="text-7xl font-bold text-white xl:text-8xl">Our work</motion.h2>
                         <motion.span 
