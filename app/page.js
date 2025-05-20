@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion'
 
 
 export default function Home() {
@@ -12,28 +13,88 @@ export default function Home() {
                 <img src="https://radiant.tailus.io/images/woman-in-dark.webp" className="fixed inset-0 h-full w-full object-cover" alt="woman in dark" width="4160" height="6240"/>
                 <div className="relative z-10 mx-auto max-w-7xl px-6 pb-40 pt-60 lg:px-12 xl:px-6 2xl:px-0">
                     <div className="pb-12 media-h:md:pb-32 media-h:lg:pb-12 xl:pb-12">
-                        <h1 data-rellax-speed="-3" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" className="rellax text-6xl font-bold text-white sm:text-8xl md:text-9xl xl:leading-tight" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>Creative Duo</h1>
+                        <motion.h1
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: { opacity: 0, x: -50 },
+                                visible: { opacity: 1, x: 0, transition: { duration: 0.6, ease: 'easeOut' } }
+                            }}
+                            className="rellax text-6xl font-bold text-white sm:text-8xl md:text-9xl xl:leading-tight" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>Creative Duo</motion.h1>
                     </div>
                     <div>
                         <div className="ml-auto md:w-2/3 md:pt-12 lg:w-1/2">
-                            <p className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that&apos;s honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</p>
-                            <Link data-rellax-speed="1" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
-                                <span className="relative">See our work</span>
+                            <motion.p 
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3 }}
+                                variants={{
+                                    hidden: { opacity: 0 },
+                                    visible: { opacity: 1, delay:2, transition: { duration: 0.6, delay:0.5, ease: 'easeOut' } }
+                                }}
+                                className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that&apos;s honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</motion.p>
+                            <Link href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
+                                <motion.span
+                                    initial="hidden"
+                                    whileInView="visible"
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 0.3 }}
+                                    variants={{
+                                        hidden: { opacity: 0 },
+                                        visible: { opacity: 1, delay:2, transition: { duration: 0.6, delay:0.8, ease: 'easeOut' } }
+                                    }}
+                                    className="relative">See our work</motion.span>
                             </Link>
                         </div>
                     </div>
                     <div data-rellax-speed="-5" data-rellax-xs-speed="0" data-rellax-mobile-speed="0" className="rellax relative mt-16 ml-auto w-max md:mt-32 md:ml-0 xl:-mt-16" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
-                        <span className="text-xs font-light uppercase tracking-widest text-white">Follow us</span>
+                        <motion.span
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: { opacity: 0 },
+                                visible: { opacity: 1, transition: { duration: 0.6, delay:1, ease: 'easeOut' } }
+                            }}
+                        className="text-xs font-light uppercase tracking-widest text-white">Follow us</motion.span>
                         <ul className="relative z-20 mt-4 space-y-2 text-sm font-light text-white">
-                            <li>
+                            <motion.li 
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3 }}
+                                variants={{
+                                    hidden: {opacity: 0, x: -50 },
+                                    visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay:1.3, ease: 'easeOut' } }
+                                }}>
                                 <a href="#" target="_blank">001 ------ Instagram</a>
-                            </li>
-                            <li>
+                            </motion.li>
+                            <motion.li
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3 }}
+                                variants={{
+                                    hidden: { opacity: 0, x: -50 },
+                                    visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay:1.6, ease: 'easeOut' } }
+                                }}>
                                 <a href="#" target="_blank">002 ------ Behance</a>
-                            </li>
-                            <li>
+                            </motion.li>
+                            <motion.li
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.3 }}
+                                variants={{
+                                    hidden: { opacity: 0, x: -50 },
+                                    visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay:1.9, ease: 'easeOut' } }
+                                }}>
                                 <a href="#" target="_blank">003 ------ Twitter</a>
-                            </li>
+                            </motion.li>
                         </ul>
                     </div>
                 </div>
@@ -48,10 +109,28 @@ export default function Home() {
                         className="rellax flex flex-wrap items-center gap-6"
                         style={{ transform: "translate3d(0px, 202px, 0px)" }}
                     >
-                        <h2 className="text-7xl font-bold text-white xl:text-8xl">Our work</h2>
-                        <span className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">
+                        <motion.h2
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0, y: -50 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.3, ease: 'easeOut' } }
+                            }}
+                        className="text-7xl font-bold text-white xl:text-8xl">Our work</motion.h2>
+                        <motion.span 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0 },
+                                visible: { opacity: 1, transition: { duration: 0.6, delay:0.9, ease: 'easeOut' } }
+                            }}
+                        className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">
                         12 Projects
-                        </span>
+                        </motion.span>
                     </div>
 
                     <div className="relative mt-20 gap-20 gap-x-6 space-y-20 sm:grid sm:grid-cols-2 sm:space-y-0 md:mt-72 lg:mt-60">
@@ -109,7 +188,15 @@ export default function Home() {
                         ];
                         
                         return (
-                        <a
+                        <motion.a
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0, y: -50 },
+                                visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay:0.9, ease: 'easeOut' } }
+                            }}
                             key={idx}
                             href="/pages/project.html"
                             data-rellax-speed={[-2, 1, -2, 0, -3, 0][idx] || 0}
@@ -135,7 +222,7 @@ export default function Home() {
                                 01 / 2023
                             </span>
                             </div>
-                        </a>
+                        </motion.a>
                         );
                     })}
                     </div>
@@ -145,14 +232,41 @@ export default function Home() {
             <section id="services" className="relative bg-black pb-20 pt-32 md:pb-0 lg:pb-0 xl:pt-32">
                 <div className="mx-auto max-w-7xl px-6 lg:px-12 xl:px-6 2xl:px-0">
                     <div className="flex flex-wrap items-center gap-6">
-                        <h2 className="text-7xl font-bold text-white xl:text-8xl">Our services</h2>
-                        <span className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">03 services</span>
+                        <motion.h2 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0 },
+                                visible: { opacity: 1, transition: { duration: 0.6, delay:0.4, ease: 'easeOut' } }
+                            }}
+                        className="text-7xl font-bold text-white xl:text-8xl">Our services</motion.h2>
+                        <motion.span
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0 },
+                                visible: { opacity: 1, transition: { duration: 0.6, delay:0.9, ease: 'easeOut' } }
+                            }}
+                            className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">03 services</motion.span>
                     </div>
                     <div className="mt-24">
                         <div className="">
                             <div className="grid gap-12 sm:grid-cols-2 xl:grid-cols-3">
                                 <div>
-                                    <div className="group border-b border-white/30 pb-8">
+                                    <motion.div 
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3 }}
+                                        variants={{
+                                            hidden: {opacity: 0, y: -30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay:0.9, ease: 'easeOut' } }
+                                        }}
+                                        className="group border-b border-white/30 pb-8">
                                         <div className="flex flex-col gap-4 divide-y divide-white/30">
                                             <span className="inline-block text-white/60">001</span>
                                             <h3 className="bg-black pt-6 text-3xl text-white">Branding for Agencies</h3>
@@ -160,29 +274,47 @@ export default function Home() {
                                         <div className="mt-0 overflow-hidden transition-all duration-500 group-hover:mt-8">
                                             <p className="max-h-0 font-light text-white/70 transition-all duration-500 group-hover:max-h-24 md:text-xl">Sapiente, rem debitis obcaecati facilis earum repudiandae enim ratione nihil iusto ea. Officia sint perspiciatis ad ducimus qui.</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div>
-                                    <div className="group border-b border-white/30 pb-8">
+                                    <motion.div 
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3 }}
+                                        variants={{
+                                            hidden: {opacity: 0, y: -30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay:0.9, ease: 'easeOut' } }
+                                        }}
+                                        className="group border-b border-white/30 pb-8">
                                         <div className="flex flex-col gap-4 divide-y divide-white/30">
-                                            <span className="inline-block text-white/60">002</span>
+                                            <span className="inline-block text-white/60">001</span>
                                             <h3 className="bg-black pt-6 text-3xl text-white">Branding for Agencies</h3>
                                         </div>
                                         <div className="mt-0 overflow-hidden transition-all duration-500 group-hover:mt-8">
                                             <p className="max-h-0 font-light text-white/70 transition-all duration-500 group-hover:max-h-24 md:text-xl">Sapiente, rem debitis obcaecati facilis earum repudiandae enim ratione nihil iusto ea. Officia sint perspiciatis ad ducimus qui.</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                                 <div>
-                                    <div className="group border-b border-white/30 pb-8">
+                                    <motion.div 
+                                        initial="hidden"
+                                        whileInView="visible"
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.3 }}
+                                        variants={{
+                                            hidden: {opacity: 0, y: -30 },
+                                            visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay:1.2, ease: 'easeOut' } }
+                                        }}
+                                        className="group border-b border-white/30 pb-8">
                                         <div className="flex flex-col gap-4 divide-y divide-white/30">
-                                            <span className="inline-block text-white/60">003</span>
+                                            <span className="inline-block text-white/60">001</span>
                                             <h3 className="bg-black pt-6 text-3xl text-white">Branding for Agencies</h3>
                                         </div>
                                         <div className="mt-0 overflow-hidden transition-all duration-500 group-hover:mt-8">
                                             <p className="max-h-0 font-light text-white/70 transition-all duration-500 group-hover:max-h-24 md:text-xl">Sapiente, rem debitis obcaecati facilis earum repudiandae enim ratione nihil iusto ea. Officia sint perspiciatis ad ducimus qui.</p>
                                         </div>
-                                    </div>
+                                    </motion.div>
                                 </div>
                             </div>
                         </div>
@@ -191,18 +323,28 @@ export default function Home() {
             </section>
             <section id="about" className="relative z-10 bg-black pb-20 pt-32 md:pb-0 md:pt-32 lg:pb-0">
                 <div className="mx-auto max-w-7xl px-6 lg:px-12 xl:px-6 2xl:px-0">
-                <div
-                    data-rellax-speed="-0.4"
-                    data-rellax-xs-speed="0"
-                    data-rellax-mobile-speed="0"
-                    className="rellax flex flex-wrap items-center gap-6 translate-y-[173px] sm:translate-y-0"
-                    // style={{ transform: 'translate3d(0px, 173px, 0px)' }}
-                >
-                    <h2 className="text-7xl font-bold text-white xl:text-8xl">About us</h2>
-                    <span className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">
-                    01 Duo
-                    </span>
-                </div>
+                <div className="flex flex-wrap items-center gap-6">
+                    <motion.h2 
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3 }}
+                        variants={{
+                            hidden: {opacity: 0 },
+                            visible: { opacity: 1, transition: { duration: 0.6, delay:0.4, ease: 'easeOut' } }
+                        }}
+                    className="text-7xl font-bold text-white xl:text-8xl">About Us</motion.h2>
+                    <motion.span
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.3 }}
+                        variants={{
+                            hidden: {opacity: 0 },
+                            visible: { opacity: 1, transition: { duration: 0.6, delay:0.9, ease: 'easeOut' } }
+                        }}
+                        className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">04 About</motion.span>
+                    </div>
 
                 <div className="mt-24 md:mt-72">
                     <div className="grid gap-6">
@@ -226,12 +368,21 @@ export default function Home() {
                         className="rellax ml-auto md:w-3/5 lg:w-2/5 translate-x-0 translate-y-0 md:translate-x-0 md:translate-y-[-390px] "
                     // style={{ transform: 'translate3d(0px, -390px, 0px)' }}
                     >
-                        <p className="mt-12 text-2xl font-light text-white">
+                        <motion.p 
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: {opacity: 0, x: 30 },
+                                visible: { opacity: 1, x: 0, transition: { duration: 0.5, delay:0.4, ease: 'easeOut' } }
+                            }}
+                        className="mt-12 text-2xl font-light text-white">
                         Minima iure saepe necessitatibus ipsa voluptatibus, minus
                         voluptatem in facere maxime quae repellendus nisi inventore
                         libero impedit eligendi, accusantium consequuntur consectetur
                         quidem?
-                        </p>
+                        </motion.p>
                     </div>
                     </div>
                 </div>
