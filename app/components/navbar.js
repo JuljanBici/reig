@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
+import { motion, useAnimation } from 'framer-motion'
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -68,7 +69,7 @@ export default function Navbar() {
                   <span className='relative'>Rreth Nesh</span>
                 </Link>
                 <Link
-                  href={{ pathname: '/', hash: 'contact' }}
+                  href="/contact"
                   className='relative py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10'
                 >
                   <span className='relative'>Na kontakto</span>
@@ -107,17 +108,50 @@ export default function Navbar() {
       <div
         className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-40 transition-transform duration-300 ${
           isMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        } flex flex-col justify-center items-center space-y-6 text-2xl text-white md:hidden`}
+        } flex flex-col justify-center items-center space-y-10 text-2xl text-white md:hidden`}
       >
-        <Link href='/categories' onClick={closeMenu}>
-          Branded
-        </Link>
-        <Link href='/about' onClick={closeMenu}>
-          Rreth Nesh
-        </Link>
-        <Link href={{ pathname: '/', hash: 'contact' }} onClick={closeMenu}>
-          Na kontakto
-        </Link>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          transition={{ duration: 0.3 }}
+          variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.3, ease: 'easeOut' } }
+          }}
+        >
+          <Link href='/categories' passHref onClick={closeMenu}>
+            <div className="block">Branded</div>
+          </Link>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          transition={{ duration: 0.3 }}
+          variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.6, ease: 'easeOut' } }
+          }}
+        >
+          <Link href='/about' passHref onClick={closeMenu}>
+            <div className="block">Rreth Nesh</div>
+          </Link>
+        </motion.div>
+        <motion.div
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false }}
+          transition={{ duration: 0.3 }}
+          variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6, delay:0.9, ease: 'easeOut' } }
+          }}
+        >
+          <Link href='/contact' passHref onClick={closeMenu}>
+            <div className="block">Na kontakto</div>
+          </Link>
+        </motion.div>
       </div>
     </>
   );

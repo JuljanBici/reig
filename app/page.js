@@ -2,11 +2,15 @@
 import Image from 'next/image'
 import Link from 'next/link';
 import { motion, useAnimation } from 'framer-motion'
+import products from '@/data/products';
 
 
 export default function Home() {
+
+  const makeupProducts = products.filter(product => product.category === 'skincare');
+
   return (
-<div className="bg-black">
+    <div className="bg-black">
         <main className="background relative">
             <section id="home" className="relative flex min-h-screen items-center">
                 <div aria-hidden="true" className="absolute inset-0 z-[1] bg-gradient-to-b from-black/10 via-black/20 to-black"></div>
@@ -36,7 +40,7 @@ export default function Home() {
                                     visible: { opacity: 1, delay:2, transition: { duration: 0.6, delay:0.5, ease: 'easeOut' } }
                                 }}
                                 className="mb-20 text-lg font-light text-white sm:text-2xl xl:leading-normal">On an endless journey to create experiences that inspire others. Always motived by design that&apos;s honest, aesthetic and natural. Probably the only designer you&apos;ll ever need.</motion.p>
-                            <Link href="#work" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
+                            <Link href="/categories" className="rellax relative inline-block py-1.5 text-white before:absolute before:inset-0 before:origin-bottom before:scale-y-[.03] before:bg-white/60 before:transition before:duration-300 hover:before:scale-y-100 hover:before:scale-x-125 hover:before:bg-white/10" style={{ transform: 'translate3d(0px, 0px, 0px)' }}>
                                 <motion.span
                                     initial="hidden"
                                     whileInView="visible"
@@ -116,7 +120,7 @@ export default function Home() {
                                 hidden: {opacity: 0, x: -20 },
                                 visible: { opacity: 1, x: 0, transition: { duration: 0.6, delay:0.3, ease: 'easeOut' } }
                             }}
-                        className="text-7xl font-bold text-white xl:text-8xl">Our work</motion.h2>
+                        className="text-6xl md:text-7xl font-bold text-white xl:text-8xl">Our Bestsellers</motion.h2>
                         <motion.span 
                             initial="hidden"
                             whileInView="visible"
@@ -127,102 +131,60 @@ export default function Home() {
                                 visible: { opacity: 1, transition: { duration: 0.6, delay:0.9, ease: 'easeOut' } }
                             }}
                         className="h-max rounded-full border border-white/40 px-2 py-1 text-xs tracking-wider text-white">
-                        12 Projects
+                        {makeupProducts.length} Products Available
                         </motion.span>
                     </div>
 
                     <div className="relative mt-20 gap-20 gap-x-6 space-y-20 sm:grid sm:grid-cols-2 sm:space-y-0 md:mt-72 lg:mt-60">
-                    {[
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "gild cover",
-                        width: 2000,
-                        height: 1333,
-                        title: "Gild Sport",
-                        },
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "project description",
-                        width: 1380,
-                        height: 920,
-                        title: "Project Name",
-                        },
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "project description",
-                        width: 826,
-                        height: 826,
-                        title: "Project Name",
-                        },
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "project description",
-                        width: 1380,
-                        height: 1380,
-                        title: "Project Name",
-                        },
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "project description",
-                        width: 740,
-                        height: 1112,
-                        title: "Project Name",
-                        },
-                        {
-                        src: "https://radiant.tailus.io/images/projects/project2.webp",
-                        alt: "project description",
-                        width: 740,
-                        height: 1110,
-                        title: "Project Name",
-                        },
-                    ].map((proj, idx) => {
+                                                {makeupProducts.map((product, idx) => {
                         const translateYMap = [
-                        "md:translate-y-[98px]",
-                        "md:translate-y-[-50px]",
-                        "md:translate-y-[86px]",
-                        "md:translate-y-0",
-                        "md:translate-y-[108px]",
-                        "md:translate-y-0",
+                            "md:translate-y-[98px]",
+                            "md:translate-y-[-50px]",
+                            "md:translate-y-[86px]",
+                            "md:translate-y-0",
+                            "md:translate-y-[108px]",
+                            "md:translate-y-0",
                         ];
-                        
+
                         return (
-                        <motion.a
+                            <motion.a
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true }}
                             transition={{ duration: 0.3 }}
                             variants={{
-                                hidden: {opacity: 0, y: -50 },
-                                visible: { opacity: 1, y: 0, transition: { duration: 0.5, delay:0.9, ease: 'easeOut' } }
+                                hidden: { opacity: 0, y: -50 },
+                                visible: {
+                                opacity: 1,
+                                y: 0,
+                                transition: { duration: 0.5, delay: 0.9, ease: 'easeOut' },
+                                },
                             }}
-                            key={idx}
-                            href="/pages/project.html"
+                            key={product.id || idx}
+                             href={`/categories/${product.category}/${product.id}`}
                             data-rellax-speed={[-2, 1, -2, 0, -3, 0][idx] || 0}
                             data-rellax-xs-speed="0"
                             data-rellax-mobile-speed="0"
                             data-rellax-tablet-speed="0"
-                            className={`rellax group translate-y-0 ${translateYMap[idx]} ${
-                            idx === 0 || idx === 3 ? "col-span-2 lg:col-span-1" : "block"
+                            className={`rellax group translate-y-0 ${translateYMap[idx] || ''} ${
+                                idx === 0 || idx === 3 ? 'col-span-2 lg:col-span-1' : 'block'
                             }`}
-                        >
+                            >
                             <div className="relative before:absolute before:inset-0 before:origin-top before:bg-gradient-to-t before:from-black/5 before:opacity-50 before:backdrop-grayscale before:transition before:duration-500 group-hover:before:origin-bottom group-hover:before:scale-y-0">
-                            <img
+                                <img
                                 className="transition duration-500"
-                                src={proj.src}
-                                alt={proj.alt}
-                                width={proj.width}
-                                height={proj.height}
-                            />
+                                alt={product.name} src="https://radiant.tailus.io/images/projects/project2.webp"
+                                />
                             </div>
                             <div className="flex items-center justify-between p-4">
-                            <h3 className="text-2xl font-normal text-white">{proj.title}</h3>
-                            <span className="h-max rounded-full border border-white/30 px-2 py-1 text-xs tracking-wider text-white">
-                                01 / 2023
-                            </span>
+                                <h3 className="text-2xl font-normal text-white">{product.name}</h3>
+                                <span className="h-max rounded-full border border-white/30 px-2 py-1 text-xs tracking-wider text-white">
+                                ${product.price}
+                                </span>
                             </div>
-                        </motion.a>
+                            </motion.a>
                         );
-                    })}
+                        })}
                     </div>
 
                 </div>

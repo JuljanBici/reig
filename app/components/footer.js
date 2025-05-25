@@ -43,7 +43,7 @@ export default function Footer() {
                                   <p>Rreth Nesh</p>
                                 </Link>
                                 </li>
-                                <Link href={{ pathname: '/', hash: 'contact' }}>
+                                <Link href="/contact">
                                     <p>Kontakto</p>
                                 </Link>
                             </ul>

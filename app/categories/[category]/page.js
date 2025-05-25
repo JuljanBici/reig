@@ -1,5 +1,5 @@
 import products from "@/data/products";
-import categorySection from "@/app/components/CategorySection";
+import CategorySection from "@/app/components/CategorySection";
 
 export async function generateStaticParams() {
   const categories = [...new Set(products.map((p) => p.category))];
@@ -13,7 +13,7 @@ export default function CategoryPage({ params }) {
 
   return (
     <div>
-      <categorySection products={categoryProducts} category={params.category} />
+      <CategorySection products={categoryProducts} category={params.category} />
     </div>
   );
 }
